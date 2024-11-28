@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../style/styleguide.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Spectral&display=swap" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+	<link rel="manifest" href="../favicon/site.webmanifest">
+	<link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<title>Guide de survie</title>
+</head>
+
+<body>
+	<div class="bg">
+		<a href="accueil.html"><img src="../img/guide_ouvert_opt.png" alt="Carnet de voyage ouvert" class="guide"></a>
+
+		<!--Tête-->
+		<header>
+			<a href="../index.html"><img src="../img/logo2.jpg" alt="Logo du site, un alpaga"></a>
+			<a href="guide.html">
+				<h1>La Patagonie</h1>
+			</a>
+		</header>
+
+		<!--Navigation-->
+		<div class="topnav" id="myTopnav">
+			<a href="guide.html" class="active">Où suis-je ?</a>
+			<a href="guide/page1.html">Quand partir en Patagonie ?</a>
+			<a href="guide/page2.html">Petits Tips</a>
+			<a href="guide/page3.html">Crédits</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+
+		<!--Corps-->
+		<div class="container">
+			<div class="container_guide">
+				<h2>Où suis-je ?</h2>
+				<br>
+				<p>Coucou toi, tu as trouvé le guide de survie du voyageur !<br> C'est un carnet de voyage avec des
+					petits tips pour t'aider à organiser ton voyage en Patagonie.<br>Pour retourner à l'accueil tu n'as
+					qu'à <a title="Clique sur le carnet ouvert en haut à droite de l'écran"
+						style="color:black; font-weight: lighter;">fermer le guide</a> (´・ｪ・`).</p>
+			</div>
+			<div class="container_iframe">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/SZeYxnSMa4c"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<!--Pieds de page-->
+		<footer>
+			<p><a href="mailto:iris.gagniere@utt.fr">Gagniere Iris P22</a> - NT Corp. © All rights reserved</p>
+		</footer>
+	</div>
+
+	<!--Java script-->
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+</body>
+
+</html>

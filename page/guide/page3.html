@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../style/styleguide.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Spectral&display=swap" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+	<link rel="manifest" href="../../favicon/site.webmanifest">
+	<link rel="mask-icon" href="../../favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+	<title>Guide de survie - Page 3</title>
+</head>
+
+<body>
+	<div class="bg">
+	<a href="../accueil.html"><img src="../../img/guide_ouvert_opt.png" alt="Carnet de voyage ouvert"
+			class="guide"></a>
+
+	<!--Tête-->
+	<header>
+		<a href="../../index.html"><img src="../../img/logo2.jpg" alt="Logo du site, un alpaga"></a>
+		<a href="../guide.html">
+			<h1>La Patagonie</h1>
+		</a>
+	</header>
+
+	<!--Navigation-->
+	<div class="topnav" id="myTopnav">
+		<a href="../guide.html">Où suis-je ?</a>
+		<a href="page1.html">Quand partir en Patagonie ?</a>
+		<a href="page2.html">Petits Tips</a>
+		<a href="page3.html" class="active">Crédits</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+
+	<!--Corps-->
+	<div class="container">
+		<div class="container_guide">
+			<br>
+			<h2>Les sites consultés pour faire ce site :</h2>
+			<br>
+			<p><a href="https://fr.wikipedia.org/wiki/Patagonie" target="_blank">Wikipédia</a><br>
+				<a href="https://www.voyage-argentine.com/blog/nature/top-5-patagonie-argentine" target="_blank">Terra Argentina</a><br>
+				<a href="https://www.routard.com/guide_a_voir/patagonie.htm" target="_blank">Le guide du routard</a><br>
+				<a href="https://www.terres-chiliennes.com/conseils-voyage/ville-chili/punta-arenas" target="_blank">Terres chiliennes</a><br>
+				<a href="https://www.techno-science.net/glossaire-definition/Patagonie-page-3.html" target="_blank">Techno-Science.net</a><br>
+			</p>
+		</div>
+		<div class="container_img">
+			<img src="../../img/guide_1_opt.jpg" alt="dessin paysage Patagonie">
+			<a href="https://fr.wikipedia.org/wiki/Moi,_Antoine_de_Tounens,_roi_de_Patagonie" target="_blank"><img src="../../img/baleine_opt.png" id="baleine"></a>
+		</div>
+	</div>
+
+	<!--Pieds de page-->
+	<footer>
+		<p><a href="mailto:iris.gagniere@utt.fr">Gagniere Iris P22</a> - NT Corp. © All rights reserved</p>
+	</footer>
+</div>
+
+	<!--Java script-->
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+</body>
+
+</html>

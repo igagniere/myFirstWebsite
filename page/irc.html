@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../style/style1.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicon1/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon1/favicon1-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon1/favicon1-16x16.png">
+	<link rel="manifest" href="../favicon1/site.webmanifest">
+	<link rel="mask-icon" href="../favicon1/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<title>Impact du réchauffement climatique</title>
+</head>
+
+<body>
+	<a href="guide.html"><img src="../img/guide.png" alt="Carnet de voyage" class="guide"></a>
+
+	<!--Tête-->
+	<header>
+		<a href="accueil.html"><img src="../img/logo1.png" alt="Logo du site, un alpaga">
+			<h1>La Patagonie</h1>
+		</a>
+	</header>
+
+	<!--Navigation-->
+	<div class="topnav" id="myTopnav">
+		<a href="accueil.html">Accueil</a>
+		<div class="dropdown">
+			<button class="dropbtn">Découverte de la Patagonie
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="region/ville.html">Villes</a>
+				<a href="region/montagne.html">Montagnes</a>
+				<a href="region/glacier.html">Glaciers</a>
+				<a href="region/pampa.html">Pampa</a>
+				<a href="region/foret.html">Forêts subpolaires</a>
+				<a href="region/littoral.html">Littoraux</a>
+				<a href="region/ile.html">Îles et archipels</a>
+			</div>
+		</div>
+		<a href="rando.html">Randonnées<br>et activités</a>
+		<a href="irc.html" class="active">Impact du réchauffement climatique</a>
+		<a href="quizz.html">Quiz</a>
+		<a href="contact.html">Contact</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+
+	<!--Corps-->
+	<div class="container">
+		<div class="container_2">
+			<h1>Impact du réchauffement climatique</h1><br>
+			<p class="alinea">La Patagonie étant une très grande zone, le réchauffement climatique et les activités humaines ont différents impacts suivant la région. Sur cette page, vous allez pouvoir découvrir les risques qu'encourent les régions de la Patagonie.</p><br><br>
+			<h2>Des risques pour les glaciers</h2>
+			<br>
+			<p class="alinea">Avec ses 16 800 km2 de glaces, le <em>Campo de Hielo Sur</em> constitue la réserve d'eau douce la plus importante d'Amérique du Sud. Mais, l'observation des photos satellites depuis 1990 montre que le glacier est en recul. Recul du sans surprise au <strong>réchauffement climatique</strong>.</p>
+			<br>
+			<br>
+			<h2 id="irc_pampa">Des risques pour la pampa</h2>
+			<br>
+			<p class="alinea">L'élevage accélère le processus d'érosion et d'appauvrissement des sols déjà affectés par le climat de plus en plus aride. La région la plus touchée est la province de <em>Santa Cruz</em> où il est question d'une <strong>désertification future</strong>.</p>
+			<br>
+			<br>
+		</div>
+	</div>
+
+	<!--Pieds de page-->
+	<div class="container_footer">
+		<footer>
+			<p><a href="mailto:iris.gagniere@utt.fr">Gagniere Iris P22</a> - NT Corp. © All rights reserved</p>
+		</footer>
+	</div>
+
+	<!--Java script-->
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+</body>
+
+</html>

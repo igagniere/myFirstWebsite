@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon1/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon1/favicon1-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon1/favicon1-16x16.png">
+    <link rel="manifest" href="../favicon1/site.webmanifest">
+    <link rel="mask-icon" href="../favicon1/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Accueil</title>
+</head>
+
+<body>
+    <a href="guide.html"><img src="../img/guide.png" alt="Carnet de voyage" class="guide"></a>
+
+    <!--Tête-->
+    <header>
+        <a href="accueil.html"><img src="../img/logo1.png" alt="Logo du site, un alpaga">
+            <h1>La Patagonie</h1>
+        </a>
+    </header>
+
+    <!--Navigation-->
+    <div class="topnav" id="myTopnav">
+        <a href="accueil.html" class="active">Accueil</a>
+        <div class="dropdown">
+            <button class="dropbtn">Découverte de la Patagonie
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="region/ville.html">Villes</a>
+                <a href="region/montagne.html">Montagnes</a>
+                <a href="region/glacier.html">Glaciers</a>
+                <a href="region/pampa.html">Pampa</a>
+                <a href="region/foret.html">Forêts subpolaires</a>
+                <a href="region/littoral.html">Littoraux</a>
+                <a href="region/ile.html">Îles et archipels</a>
+            </div>
+        </div>
+        <a href="rando.html">Randonnées<br>et activités</a>
+        <a href="irc.html">Impact du réchauffement climatique</a>
+        <a href="quizz.html">Quiz</a>
+        <a href="contact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!--Corps-->
+    <div class="container">
+        <div class="container_2">
+            <br>
+            <h2>Présentation</h2>
+            <br>
+            <p class="alinea">À l’extrême sud du continent latinoaméricain, découvrez les terres australes et
+                mythiques
+                du paradis des randonneurs et voyageurs passionnés de nature : la <strong>Patagonie</strong> ! Un
+                vaste
+                territoire qui s’étend de la cordillère des Andes jusqu’à la côte atlantique. Des paysages de
+                steppes
+                arides, déserts et prairies qui offrent une diversité d’activités et d’expériences pour tous les
+                âges et
+                toutes les saisons !
+            </p><br>
+            <p>Voici un petit rappel sur les différentes régions de Patagonie :<br></p>
+            <p class="alinea">La Patagonie se partage entre le Chili (10% de sa superficie) et l’Argentine (90%
+                restants). Les paysages de montagnes, steppes arides, hauts plateaux et grands lacs ont été façonnés
+                par
+                des périodes glaciaires importantes. Dans ce lieu inhospitalier balayé par les vents se sont
+                installés à
+                partir du 19e siècle des pionniers gallois, allemands, français, irlandais… aux côtés ou au
+                détriment
+                des peuples originaires <em>chonos</em>, <em>aonikenk</em>, <em>mapuches</em>, <em>selknam</em>… Un
+                métissage visible sur les menus qui proposent tout autant le <em>chimichurri</em> et le
+                <em>curanto</em>
+                que le goulasch ou la fondue !
+            </p>
+            <p class="alinea">L’hospitalité y est légendaire, et les infrastructures peu développées : pas de train,
+                et
+                une couverture wifi incomplète ! Dans cette région encore sauvage, les routes peuvent avoir quelques
+                ornières et l’accès à l’électricité peut être un luxe. Ne vous étonnez pas si certains
+                <em>lodges</em> et <em>estancias</em> imposent des horaires de coupure: la ressource est
+                précieuse et rationnée !
+            </p><br>
+        </div>
+        <div class="container_iframe">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/l3-tgwXP-pk"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <br><br>
+    </div>
+
+    <!--Pieds de page-->
+    <div class="container_footer">
+        <footer>
+            <p><a href="mailto:iris.gagniere@utt.fr">Gagniere Iris P22</a> - NT Corp. © All rights reserved</p>
+        </footer>
+    </div>
+
+    <!--Java script-->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>

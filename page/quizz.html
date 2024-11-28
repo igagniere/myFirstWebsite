@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon1/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon1/favicon1-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon1/favicon1-16x16.png">
+    <link rel="manifest" href="../favicon1/site.webmanifest">
+    <link rel="mask-icon" href="../favicon1/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        label {
+            display: block;
+        }
+
+        input {
+            width: 30px;
+            margin-left: 20px;
+        }
+    </style>
+    <title>Quiz</title>
+</head>
+
+<body onload="NextQuestion(0)">
+    <a href="guide.html"><img src="../img/guide.png" alt="Carnet de voyage" class="guide"></a>
+
+    <!--Tête-->
+    <header>
+        <a href="accueil.html"><img src="../img/logo1.png" alt="Logo du site, un alpaga">
+            <h1>La Patagonie</h1>
+        </a>
+    </header>
+
+    <!--Navigation-->
+    <div class="topnav" id="myTopnav">
+        <a href="accueil.html" id="quiznav" style="width:auto;">Retourner à l'accueil</a>
+    </div>
+    <div class="container">
+        <div class="container_2">
+            <h1>Quiz sur la Patagonie</h1>
+            <div class="main">
+                <!-- Quand le quiz est finit -->
+                <div class="modal-container" id="score-modal">
+                    <div class="modal-content-container">
+                        <h2>Vous avez finit le quiz</h2>
+                        <div class="grade-details">
+                            <p>Mauvaise.s réponse.s : <span id="wrong-answers"></span></p>
+                            <p>Bonne.s réponse.s : <span id="right-answers"></span></p>
+                            <p>Note : <span id="grade-percentage"></span>%</p>
+                            <p><span id="remarks"></span></p>
+                        </div>
+                        <div class="modal-button-container">
+                            <button onclick="closeScoreModal()">Continue</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin des détails de fin de quiz-->
+
+                <div class="game-quiz-container">
+
+                    <div class="game-details-container">
+                        <h2>Score : <span id="player-score"></span> / 5</h2>
+                        <h2> Question : <span id="question-number"></span> / 5</h2>
+                    </div>
+
+                    <div class="game-question-container">
+                        <h2 id="display-question"></h2>
+                    </div>
+
+                    <div class="game-options-container">
+                        <div class="modal-container" id="option-modal">
+                            <div class="modal-content-container">
+                                <h2>S'il vous plaît, donnez une réponse</h2>
+                                <div class="modal-button-container">
+                                    <button onclick="closeOptionModal()">Continuer</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span>
+                            <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                            <label for="option-one" class="option" id="option-one-label"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                            <label for="option-two" class="option" id="option-two-label"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                            <label for="option-three" class="option" id="option-three-label"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                            <label for="option-four" class="option" id="option-four-label"></label>
+                        </span>
+                    </div>
+
+                    <div class="next-button-container">
+                        <button onclick="handleNextQuestion()">Prochaine question</button>
+                    </div>
+
+                </div>
+            </div>
+            <script>
+                //Le stock de questions
+                const questions = [
+                    {
+                        question: "Qu'est ce que la Patagonie ?",
+                        optionA: "Une zone qui englobe tout le Sud de l'Amérique du Sud",
+                        optionB: "Une patate qui agonise",
+                        optionC: "La diagonale du vide mais pour l'Amérique du Sud",
+                        optionD: "La partie Sud de l'Argentine",
+                        correctOption: "optionA"
+                    },
+
+                    {
+                        question: "Combien de fois peut-on mettre la France dans la Patagonie ?",
+                        optionA: "1 fois",
+                        optionB: "1,5 fois",
+                        optionC: "2,5 fois",
+                        optionD: "3 fois",
+                        correctOption: "optionB"
+                    },
+
+                    {
+                        question: "Qui s'est autoproclamé roi de Patagonie ?",
+                        optionA: "Antoine-Hippolyte Cros",
+                        optionB: "Achille Laviarde",
+                        optionC: "Antoine de Tounens",
+                        optionD: "Jacques-Antoine Bernard",
+                        correctOption: "optionC"
+                    },
+
+                    {
+                        question: "Comment s'appellent les habitants de Patagonie ?",
+                        optionA: "Patagos",
+                        optionB: "Patagons",
+                        optionC: "Patagoniens",
+                        optionD: "Patates",
+                        correctOption: "optionB"
+                    },
+
+                    {
+                        question: "Quelle est la plus grande ville de Patagonie ?",
+                        optionA: "Ushuaïa",
+                        optionB: "Perito Moreno",
+                        optionC: "Puerta Natales",
+                        optionD: "Punta Arenas",
+                        correctOption: "optionD"
+                    },
+
+                    {
+                        question: "Comment s'appellent les aborigènes de Patagonie ?",
+                        optionA: "Mapuches",
+                        optionB: "Gauchos",
+                        optionC: "Huaso",
+                        optionD: "Capuches",
+                        correctOption: "optionA"
+                    },
+
+                    {
+                        question: "Comment s'appelle le détroit qui traverse la Patagonie ?",
+                        optionA: "Gibraltar",
+                        optionB: "Bèring",
+                        optionC: "Magellan",
+                        optionD: "Malacca",
+                        correctOption: "optionC"
+                    }
+                ]
+
+
+                let shuffledQuestions = [] //vide pour garder les questions selectionnées au hasard
+
+                function handleQuestions() {
+                    //prend aux hasard 5 questions
+                    while (shuffledQuestions.length <= 4) {
+                        const random = questions[Math.floor(Math.random() * questions.length)]
+                        if (!shuffledQuestions.includes(random)) {
+                            shuffledQuestions.push(random)
+                        }
+                    }
+                }
+
+                let questionNumber = 1 //le numéro de la question actuelle
+                let playerScore = 0  //le score du joueur
+                let wrongAttempt = 0 //nombre de mauvaise rep
+                let indexNumber = 0 //l'index de la question actuelle
+
+                //fonction qui permet d'aller à la question suivante
+                //garde aussi des infos sur l'avancement du quiz
+                function NextQuestion(index) {
+                    handleQuestions()
+                    const currentQuestion = shuffledQuestions[index]
+                    document.getElementById("question-number").innerHTML = questionNumber
+                    document.getElementById("player-score").innerHTML = playerScore
+                    document.getElementById("display-question").innerHTML = currentQuestion.question;
+                    document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
+                    document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
+                    document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
+                    document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
+                }
+
+                function checkForAnswer() {
+                    const currentQuestion = shuffledQuestions[indexNumber] //gets current Question 
+                    const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
+                    const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
+                    let correctOption = null
+
+                    options.forEach((option) => {
+                        if (option.value === currentQuestionAnswer) {
+                            //get's correct's radio input with correct answer
+                            correctOption = option.labels[0].id
+                        }
+                    })
+
+                    //checking to make sure a radio input has been checked or an option being chosen
+                    if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
+                        document.getElementById('option-modal').style.display = "flex"
+                    }
+
+                    //checking if checked radio button is same as answer
+                    options.forEach((option) => {
+                        if (option.checked === true && option.value === currentQuestionAnswer) {
+                            document.getElementById(correctOption).style.backgroundColor = "green"
+                            playerScore++ //adding to player's score
+                            indexNumber++ //adding 1 to index so has to display next question..
+                            //set to delay question number till when next question loads
+                            setTimeout(() => {
+                                questionNumber++
+                            }, 1000)
+                        }
+
+                        else if (option.checked && option.value !== currentQuestionAnswer) {
+                            const wrongLabelId = option.labels[0].id
+                            document.getElementById(wrongLabelId).style.backgroundColor = "red"
+                            document.getElementById(correctOption).style.backgroundColor = "green"
+                            wrongAttempt++ //adds 1 to wrong attempts 
+                            indexNumber++
+                            //set to delay question number till when next question loads
+                            setTimeout(() => {
+                                questionNumber++
+                            }, 1000)
+                        }
+                    })
+                }
+
+                //called when the next button is called
+                function handleNextQuestion() {
+                    checkForAnswer() //check if player picked right or wrong option
+                    unCheckRadioButtons()
+                    //delays next question displaying for a second just for some effects so questions don't rush in on player
+                    setTimeout(() => {
+                        if (indexNumber <= 4) {
+                            //displays next question as long as index number isn't greater than 9, remember index number starts from 0, so index 9 is question 10
+                            NextQuestion(indexNumber)
+                        }
+                        else {
+                            handleEndGame()//ends game if index number greater than 9 meaning we're already at the 10th question
+                        }
+                        resetOptionBackground()
+                    }, 1000);
+                }
+
+                //sets options background back to null after display the right/wrong colors
+                function resetOptionBackground() {
+                    const options = document.getElementsByName("option");
+                    options.forEach((option) => {
+                        document.getElementById(option.labels[0].id).style.backgroundColor = ""
+                    })
+                }
+
+                // unchecking all radio buttons for next question(can be done with map or foreach loop also)
+                function unCheckRadioButtons() {
+                    const options = document.getElementsByName("option");
+                    for (let i = 0; i < options.length; i++) {
+                        options[i].checked = false;
+                    }
+                }
+
+                // function for when all questions being answered
+                function handleEndGame() {
+                    let remark = null
+                    let remarkColor = null
+
+                    // condition check for player remark and remark color
+                    if (playerScore == 0) {
+                        remark = "Tu as fait exprès j'espère ..."
+                        remarkColor = "red"
+                    }
+                    else if (playerScore >= 0 && playerScore < 3) {
+                        remark = "Hmmm... tu n'as peut-être pas trouvé les easter eggs, dommage"
+                        remarkColor = "orange"
+                    }
+                    else if (playerScore >= 3 && playerScore < 5) {
+                        remark = "Ho, pas mal !"
+                        remarkColor = "orange"
+                    }
+                    else if (playerScore == 5) {
+                        remark = "La Patagonie n'a plus de secret pour toi on dirait"
+                        remarkColor = "green"
+                    }
+                    const playerGrade = ((playerScore*2) / 10) * 100
+
+                    //data to display to score board
+                    document.getElementById('remarks').innerHTML = remark
+                    document.getElementById('remarks').style.color = remarkColor
+                    document.getElementById('grade-percentage').innerHTML = playerGrade
+                    document.getElementById('wrong-answers').innerHTML = wrongAttempt
+                    document.getElementById('right-answers').innerHTML = playerScore
+                    document.getElementById('score-modal').style.display = "flex"
+                }
+
+                //closes score modal, resets game and reshuffles questions
+                function closeScoreModal() {
+                    questionNumber = 1
+                    playerScore = 0
+                    wrongAttempt = 0
+                    indexNumber = 0
+                    shuffledQuestions = []
+                    NextQuestion(indexNumber)
+                    document.getElementById('score-modal').style.display = "none"
+                }
+
+                //function to close warning modal
+                function closeOptionModal() {
+                    document.getElementById('option-modal').style.display = "none"
+                }
+            </script>
+        </div>
+    </div>
+</body>

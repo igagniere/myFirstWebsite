@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../style/style1.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon1/favicon1-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon1/favicon1-16x16.png">
+	<link rel="manifest" href="../favicon1/site.webmanifest">
+	<link rel="mask-icon" href="../favicon1/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<title>Contact</title>
+</head>
+
+<body>
+	<a href="guide.html"><img src="../img/guide.png" alt="Carnet de voyage" class="guide"></a>
+
+	<!--Tête-->
+	<header>
+		<a href="accueil.html"><img src="../img/logo1.png" alt="Logo du site, un alpaga">
+			<h1>La Patagonie</h1>
+		</a>
+	</header>
+
+	<!--Navigation-->
+	<div class="topnav" id="myTopnav">
+		<a href="accueil.html">Accueil</a>
+		<div class="dropdown">
+			<button class="dropbtn">Découverte de la Patagonie
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="region/ville.html">Villes</a>
+				<a href="region/montagne.html">Montagnes</a>
+				<a href="region/glacier.html">Glaciers</a>
+				<a href="region/pampa.html">Pampa</a>
+				<a href="region/foret.html">Forêts subpolaires</a>
+				<a href="region/littoral.html">Littoraux</a>
+				<a href="region/ile.html">Îles et archipels</a>
+			</div>
+		</div>
+		<a href="rando.html">Randonnées<br>et activités</a>
+		<a href="irc.html">Impact du réchauffement climatique</a>
+		<a href="quizz.html">Quiz</a>
+		<a href="contact.html" class="active">Contact</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+	<!--Navigation-->
+
+	<!--Corps-->
+	<div class="container">
+		<div class="container_1">
+			<br>
+			<h2>Présentations</h2>
+			<br>
+
+			<div class="image">
+				<img src="../img/49434_opt.jpg" alt="La personne qui a demandé ce site web">
+				<p>Raynaud Jeanne - La cliente</p>
+			</div>
+
+			<div class="image">
+				<img src="../img/49169_opt.jpg" alt="La personne qui a réalisé ce site web">
+				<p>Gagniere Iris - La cheffe de projet</p>
+			</div>
+		</div>
+
+		<div class="container_1">
+			<br>
+			<hr>
+			<br>
+
+			<h2>Prenons contact</h2>
+			<br>
+			<br>
+
+			<form action="http://mm01.thorelnicolas.fr/formulaire/traitement.php" method="post" accept-charset="utf-8">
+				<label for="nom">Votre nom complet :</label>
+				<br>
+
+				<input type="text" maxlenght="25" id="nom" name="nom" placeholder="NOM Prénom" required>
+				<br><br>
+
+
+				<label for="mail">Votre adresse e-mail :</label>
+				<br>
+
+				<input type="email" id="mail" name="mail" placeholder="prénom.nom@utt.fr" required>
+				<br><br>
+
+
+				<label for="statut">Qui voulez-vous contacter ?</label>
+				<br>
+
+				<select name="statut" id="statut" required>
+					<option value="etudiant">Gagniere Iris</option>
+					<option value="professeur">Raynaud Jeanne</option>
+				</select>
+				<br><br>
+
+
+				<label for="comment">Votre message :</label>
+				<br>
+
+				<textarea type="text" id="comment" name="comment" rows="4" cols="50" required></textarea>
+				<br>
+
+				<input type="submit" value="Envoyer"><br><br>
+			</form>
+		</div>
+	</div>
+
+	<!--Pieds de page-->
+	<div class="container_footer">
+		<footer>
+			<p><a href="mailto:iris.gagniere@utt.fr">Gagniere Iris P22</a> - NT Corp. © All rights reserved</p>
+		</footer>
+	</div>
+
+	<!--Java script-->
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+</body>
+
+</html>

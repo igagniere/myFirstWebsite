@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <title>Galerie d'art par Gagniere Iris</title>
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.png" alt="logo du site" id="img-logo">
+        <h1>Galerie d'art par Gagniere Iris</h1>
+    </header>
+
+    <nav>
+        <a href="index.html#galerie">Galerie</a>
+        <a href="index.html#tableaux">Tableaux</a>
+        <a href="index.html#son">Son</a>
+        <a href="index.html#video">Vidéo</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <header class="head2" id="galerie">
+            <h2>Galerie</h2>
+        </header>
+        <div class="container_mini">
+            <p class="lettre">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut risus diam. Aenean feugiat
+                justo leo, eget mollis felis pharetra vel. Sed at ornare risus. Nulla facilisi. Pellentesque dignissim
+                metus metus, nec scelerisque nunc fringilla sed. Duis eu nunc ut est dapibus gravida auctor eget lectus.
+                Phasellus et ultricies mi, sit amet convallis justo. Fusce volutpat congue mauris non hendrerit. Quisque
+                vitae purus nunc. Donec vitae diam vel enim posuere pharetra pulvinar a ipsum. Sed tempus, arcu in
+                elementum iaculis, mi ante tincidunt orci, at facilisis leo mi et tellus. Aliquam eget dolor id erat
+                ultricies tincidunt. Aliquam vel enim cursus lectus tempor laoreet. Pellentesque mollis mi sapien.</p>
+            <p class="lettre">Etiam ac egestas leo. Nullam elementum eu lacus vel gravida. Sed vestibulum consequat
+                tellus. Ut mi quam, elementum eget purus tincidunt, ornare egestas orci. Nam turpis urna, condimentum a
+                hendrerit sed, porta ut mi. Nam lorem enim, interdum sed arcu in, suscipit hendrerit leo. Nulla
+                ullamcorper justo nec turpis vulputate, eu sollicitudin lorem semper. Suspendisse faucibus enim id
+                dapibus eleifend. Sed purus est, pharetra vitae eros a, rhoncus accumsan nunc.</p>
+        </div>
+
+        <header class="head2" id="tableaux">
+            <h2>Tableaux</h2>
+        </header>
+        <div class="container_mini">
+            <img src="img/img4.jpg" alt="Tableux art moderne">
+            <img src="img/img5.jpg" alt="Tableux art moderne">
+            <img src="img/img6.jpg" alt="Tableux art moderne">
+            <img src="img/img7.jpg" alt="Tableux art moderne">
+        </div>
+
+        <header class="head2" id="son">
+            <h2>Son</h2>
+        </header>
+        <div class="container_mini">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/817517551&color=%23bc8464&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div
+                style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/lebruitdelart" title="Le Bruit de l&#x27;art" target="_blank"
+                    style="color: #cccccc; text-decoration: none;">Le Bruit de l&#x27;art</a> · <a
+                    href="https://soundcloud.com/lebruitdelart/episode-4-nina-koltchitskaia"
+                    title="Épisode 4 - Nina Koltchitskaia, photographe, réalisatrice, dessinatrice" target="_blank"
+                    style="color: #cccccc; text-decoration: none;">Épisode 4 - Nina Koltchitskaia, photographe,
+                    réalisatrice, dessinatrice</a></div>
+        </div>
+
+        <header class="head2" id="video">
+            <h2>Vidéo</h2>
+        </header>
+        <div class="container_mini">
+            <a href="https://mm01.thorelnicolas.fr/p22/daredare.mp4"></a>
+            <a href="https://mm01.thorelnicolas.fr/p22/daredare.ogv"></a>
+            <a href="https://mm01.thorelnicolas.fr/p22/daredare.webm"></a>
+        </div>
+
+
+        <header class="head2" id="contact">
+            <h2>Contact</h2>
+        </header>
+        <div class="container_mini">
+            <form action="mailto:iris.gagniere@utt.fr" method="post" accept-charset="utf-8">
+                <label for="nom">Votre prénom :</label>
+                <br>
+
+                <input type="text" maxlenght="25" id="prenom" name="prenom" placeholder="prenom">
+                <br><br>
+
+                <label for="nom">Votre nom :</label>
+                <br>
+
+                <input type="text" maxlenght="25" id="nom" name="nom" placeholder="nom" required>
+                <br><br>
+
+
+                <label for="mail">Votre adresse e-mail :</label>
+                <br>
+
+                <input type="email" id="email" name="email" placeholder="prénom.nom@utt.fr" required>
+                <br><br>
+
+
+                <label for="comment">Commentaires :</label>
+                <br>
+
+                <textarea type="text" id="comment" name="comment" cols="50" placeholder="vos commentaires"
+                    required></textarea>
+                <br>
+
+                <input type="submit" value="Envoyer"><br><br>
+            </form>
+
+
+        </div>
+    </div>
+    <footer>
+        <p></p>
+    </footer>
+</body>
+
+</html>

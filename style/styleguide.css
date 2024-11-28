@@ -1,0 +1,367 @@
+@charset "utf-8";
+/* Permet de pouvoir d'utiliser des caractères spéciaux pour les commentaires*/
+
+/*Typo spéciale :
+font-family: 'Patrick Hand', cursive;
+*/
+
+/* Initialisation des box et des marges */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Initialisation des box et des marges */
+
+
+/*Modification générales :*/
+
+/*Set de base*/
+body {
+    background-color: #794725;
+    font-family: 'Patrick Hand', cursive;
+    max-width: 1280px;
+    margin: auto
+}
+
+.bg {
+    background-image: url('../img/page_opt.png');
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.3em;
+    color: whitesmoke;
+    background-color: rgb(255, 196, 140);
+    border-radius: 3em;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: auto;
+    padding: 0 0.3em 0 0.3em;
+}
+
+h2 {
+    font-size: 1.6em;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.alinea {
+    text-indent: 2em;
+}
+
+a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    width: 10%;
+    border-radius: 50%;
+}
+
+ul {
+    margin-left: 3em;
+}
+
+#baleine {
+    width: 40px;
+    border-radius: 0;
+    z-index: 1;
+    margin: 1em 0 1em 0;
+}
+
+/*Set de base*/
+
+.guide {
+    width: 5em;
+    position: absolute;
+    border-radius: 0%;
+}
+
+/*Tête*/
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/*Tête*/
+
+/*Navigation*/
+.topnav {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border-bottom: solid black 0.2em;
+}
+
+.topnav a {
+    display: inline-block;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    width: 24%;
+    padding-top: 0.4em;
+    color: #000000;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    color: darkslategray;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.topnav a.active {
+    color: whitesmoke;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+/*Navigation*/
+
+/*Boîtes*/
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.container a {
+    color: darkslategray;
+}
+
+.container_guide {
+    background-color: rgba(255, 238, 223, 0.8);
+    border-radius: 2em;
+    width: 100%;
+    margin: 0.6em 0 0.6em 0;
+    padding: 2em;
+}
+
+.container_img {
+    text-align: center;
+    position: relative;
+}
+
+.container_img img {
+    border-radius: 2em;
+    width: 100%;
+}
+
+.container_iframe {
+    height: 500px;
+    width: 90%;
+    margin: 0.5em 5% 0.5em 5%;
+}
+
+/*Boîtes*/
+
+/*Pieds de page*/
+footer {
+    font-size: 1em;
+    color: black;
+    height: 2em;
+    border-top: solid black 0.2em;
+    text-align: center;
+    width: 80%;
+    margin: 0% 10% 0% 10%;
+    padding-top: 0.3em;
+    border-radius: 0em 0em 3em 3em;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*Pieds de page*/
+
+
+/*Responsive*/
+
+@media screen and (max-width: 768px) {
+
+    /*Modifs générales tablette*/
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    img {
+        width: 20%;
+    }
+
+    .guide {
+        width: 4em;
+    }
+
+
+    /*Modifs générales tablette*/
+
+    /*Navigation tablette*/
+
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .topnav a.active {
+        display: contents;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: center;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    /*Navigation tablette*/
+
+    /*Boîtes tablette*/
+
+    .container_iframe {
+        height: 300px;
+    }
+
+    /*Boîtes tablette*/
+
+    /*Pieds de page tablette*/
+    footer {
+        font-size: 0.9em;
+        height: 1.8em;
+        padding-top: 0.2em;
+        border-radius: 0em 0em 1em 1em;
+    }
+
+    /*Pieds de page tablette*/
+}
+
+@media screen and (max-width: 425px) {
+    /*Modifs générales tel*/
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    /*Modifs générales tel*/
+
+    .guide {
+        width: 3em;
+    }
+
+    /*Navigation tel*/
+    .topnav {
+        border-radius: 1em 1em 0em 0em;
+        padding: 0.3em 0em 0.3em 0.8em
+    }
+
+    .topnav a {
+        display: none;
+        font-size: 1.1em;
+        width: 7em;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    /*Navigation tel*/
+
+    /*Boites tel*/
+    .container_iframe {
+        height: 170px;
+    }
+
+    /*Boites tel*/
+
+    /*Pieds de page tel*/
+    footer {
+        font-size: 0.9em;
+        height: 1.8em;
+        padding-top: 0.2em;
+        border-radius: 0em 0em 1em 1em;
+    }
+
+    /*Pieds de page tel*/
+}
+
+/*Responsive*/

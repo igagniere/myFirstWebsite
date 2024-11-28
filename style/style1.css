@@ -1,0 +1,1125 @@
+@charset "utf-8";
+/* Permet de pouvoir d'utiliser des caractères spéciaux pour les commentaires*/
+
+/*Polices spéciales
+font-family: 'Roboto', sans-serif;
+*/
+
+/* Initialisation des box et des marges */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Initialisation des box et des marges */
+
+
+/*Modification générales :*/
+
+/*Set de base*/
+body {
+    background-color: #248E8A;
+    background-image: url('../img/bg3_opt.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+    max-width: 1280px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: whitesmoke;
+    background-color: #6C4BAE;
+    border-radius: 3em;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: auto;
+    padding: 0 0.3em 0 0.3em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.2em;
+    text-align: center;
+    color: #CC70D7;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+p,
+label {
+    font-size: 1em;
+    text-align: justify;
+}
+
+.alinea {
+    text-indent: 2em;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    width: 10%;
+}
+
+ul {
+    margin-left: 3em;
+}
+
+/*Set de base*/
+
+.guide {
+    width: 7em;
+    position: fixed;
+    z-index: 2;
+    margin: 0.2em;
+}
+
+/*Tête*/
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/*Tête*/
+
+/*Navigation*/
+.topnav {
+    background-color: #FFDDE1;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    border-bottom: solid #ffc6cc 0.3em;
+    overflow: hidden;
+    border-radius: 3em 3em 0em 0em;
+    display: table;
+}
+
+.topnav a,
+.dropdown {
+    display: inline-block;
+    text-align: center;
+    color: #74444C;
+    font-size: 1em;
+    width: 13%;
+}
+
+.topnav a {
+    margin: 0.6em 0 0.4em 0;
+}
+
+.topnav a:hover {
+    color: #248E8A;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topnav a.active {
+    color: #248E8A;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.dropdown {
+    font-size: 1.1em;
+    width: auto;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    padding: 0.9em 1em;
+    margin: 0;
+    background-color: #FFDDE1;
+    font-weight: bold;
+    color: #74444C;
+    font-family: inherit;
+    font-size: 0.9em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0em 0.5em 1em 0em rgba(0, 0, 0, 0.2);
+    padding-top: 0.3em;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: table;
+}
+
+.dropdown-content a {
+    float: none;
+    color: #74444C;
+    padding: 0.9em 1em;
+    text-decoration: none;
+    display: table;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    text-decoration: none;
+}
+
+/*Navigation*/
+
+/*Boîtes*/
+.container {
+    background-color: #fffeebd3;
+    width: 80%;
+    margin: auto;
+}
+
+.container a {
+    color: #248E8A;
+}
+
+/*Pour les images arondies (contact seulement mdr)*/
+.container_1 {
+    width: 90%;
+    margin: auto;
+}
+
+.container_1 .image {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.container_1 .image img {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.container_1 .image p {
+    text-align: center;
+}
+
+/*container de base*/
+.container_2 {
+    width: 90%;
+    margin: auto;
+    padding: 1em 0em 1em 0em;
+    text-align: justify;
+    overflow: auto;
+}
+
+.container_2 img {
+    width: 50%;
+    float: right;
+    margin: 0.5em 0 0 0.5em;
+}
+
+.container_2 h1 {
+    font-size: 1.6em;
+    color: whitesmoke;
+    background-color: #CC70D7;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: auto;
+    padding: 0 0.3em 0 0.3em;
+}
+
+/*container pour l'index car pb avec les layers parallax*/
+.container_index {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/index_opt.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.container_index_mini {
+    width: 90%;
+    margin: auto;
+    padding: 15% 0 15% 0;
+}
+
+.container_index_mini h2 {
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    color: white;
+}
+
+.container_index_mini img {
+    width: 20%;
+    margin: 0 40% 0 40%;
+}
+
+.container_index_mini a {
+    font-size: 2em;
+}
+
+.container_index_mini a:hover {
+    text-decoration: none;
+}
+
+.container_iframe {
+    height: 500px;
+    width: 90%;
+    margin: 0.5em 5% 0.5em 5%;
+}
+
+/*Boîtes*/
+
+
+/*Spéciaux*/
+
+/*Parallaxe*/
+/* transparente scrollbar */
+div::-webkit-scrollbar {
+    width: 12px;
+}
+
+div::-webkit-scrollbar-thumb {
+    border: 2px solid #ffffff00;
+    border-radius: 20px;
+}
+
+.selector {
+    scrollbar-width: none;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+h2.centered {
+    font-size: 2em;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    color: white;
+}
+
+.parallax_wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 300px;
+    max-width: 1280px;
+}
+
+.parallax_wrapper .intro_screen {
+    height: 100vh;
+    background-image: url("../img/parallax_8_opt.jpg");
+    background-size: cover;
+}
+
+.parallax_wrapper .outro_screen {
+    height: 100px;
+    background-color: #fffeebd3;
+}
+
+.parallax_wrapper .parallax_group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.parallax_wrapper .parallax_group .parallax_layer {
+    position: absolute;
+    inset: 0;
+}
+
+.parallax_wrapper .parallax_group .base_layer {
+    /*Calcul du scalaire: 1 + ((z transform value * -1) / perspective)*/
+    transform: translateZ(-300px) scale(2.1);
+}
+
+.parallax_wrapper .parallax_group .mid_layer {
+    transform: translateZ(0);
+}
+
+.parallax_wrapper .parallax_group .top_layer {
+    transform: translateZ(180px) scale(0.4);
+}
+
+#group-1 {
+    z-index: -1;
+}
+
+#intro {
+    z-index: 0;
+}
+
+#group-2 .mid_layer {
+    background-image: url("../img/parallax_15_opt.jpg");
+    background-size: cover;
+}
+
+/*Parallaxe*/
+
+/*Shake*/
+
+.avion:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/*Shake*/
+
+/*Formulaire*/
+/* style général du formulaire */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Pour être sûr que le padding et la width restent en place */
+    margin: 6px 0px 16px 0px;
+    resize: vertical;
+    /* Permet au visiteur de modifier verticalment la taille de la zone de texte */
+}
+
+/* style du bouton d'envoi */
+input[type=submit] {
+    background-color: #74444C;
+    color: white;
+    padding: 0.6em 1em 0.6em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+    width: -moz-fit-content;
+    display: block;
+    margin: auto;
+}
+
+input[type=submit]:hover {
+    background-color: #CC70D7;
+}
+
+/*Formulaire*/
+
+/*Flip card*/
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 125px;
+    margin-bottom: 8px;
+    perspective: 1000px;
+    /* à enlever si on veut pas de l'effet 3D */
+}
+
+/* Permet de bien positionner les éléments à l'arriere de la carte */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Indique le sens de la rotation (ici par rapport à l'axe de y)*/
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* position bien les côtés de la carte */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style de devant (si l'image ne charge pas) */
+.flip-card-front {
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Style de derrière  */
+.flip-card-back {
+    background-color: #CC70D7;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card_text {
+    margin: 1em;
+    font-size: 0.9em;
+}
+
+.card_text h2 {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    width: 90%;
+    margin: 0 5% 0 5%;
+    font-size: 1.2em;
+    color: white;
+}
+
+/*Flip card*/
+
+/*Photos comme pinterest*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    width: 95%;
+    margin: 0 2.5% 0 2.5%;
+}
+
+/* Créer 4 colonnes identiques en taille */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+    margin-bottom: 8px;
+}
+
+.column img,
+.column .flip-card-back {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Photos comme Pinterest */
+
+/*Quizz*/
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-quiz-container {
+    width: 90%;
+    height: 30rem;
+    background-color: #6C4BAE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 30px;
+}
+
+.game-details-container {
+    width: 80%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game-details-container h2 {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.game-question-container {
+    width: 80%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #CC70D7;
+    border-radius: 25px;
+}
+
+.game-question-container h2 {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 3px;
+    color: white;
+}
+
+.game-options-container {
+    width: 80%;
+    height: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.game-options-container span {
+    width: 45%;
+    height: 3rem;
+    border: 2px solid #CC70D7;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+span label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-weight: 600;
+    color: white;
+}
+
+span label:hover {
+    -ms-transform: scale(1.12);
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+    color: #20090C;
+}
+
+input[type="radio"] {
+    position: relative;
+    display: none;
+}
+
+
+input[type=radio]:checked~.option {
+    background: #CC70D7;
+}
+
+.next-button-container {
+    width: 50%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.next-button-container button {
+    width: 9rem;
+    height: 2rem;
+    border-radius: 10px;
+    background: none;
+    color: white;
+    font-weight: 600;
+    border: 2px solid #CC70D7;
+    cursor: pointer;
+    outline: none;
+}
+
+.next-button-container button:hover {
+    background-color: #CC70D7;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-animation: fadeIn 1.2s ease-in-out;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.modal-content-container {
+    height: 20rem;
+    width: 25rem;
+    background-color: #20090C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+
+.modal-content-container h2 {
+    font-size: 1.3rem;
+    height: 3rem;
+    color: white;
+    text-align: center;
+}
+
+.grade-details {
+    width: 15rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.grade-details p {
+    color: #6C4BAE;
+    text-align: center;
+}
+
+.modal-button-container {
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-button-container button {
+    width: 10rem;
+    height: 2rem;
+    background: none;
+    outline: none;
+    border: 1px solid #6C4BAE;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.modal-button-container button:hover {
+    background-color: #6C4BAE;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*Quizz*/
+
+/*Spéciaux*/
+
+
+/*Pieds de page*/
+.container_footer {
+    width: 80%;
+    margin: auto;
+}
+
+footer {
+    border-top: solid #74444C 0.3em;
+    padding-top: 0.3em;
+    background-color: #20090C;
+    height: 2em;
+    color: #74444C;
+    font-size: 1em;
+    text-align: center;
+    width: auto;
+    border-radius: 0em 0em 3em 3em;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #74444C;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*Pieds de page*/
+
+
+/*Responsive*/
+
+@media screen and (max-width: 768px) {
+
+    /*Modifs générales tablette*/
+    body {
+        background-image: url('../img/bg1_opt.jpg');
+        background-size: 100%;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    p,
+    label {
+        font-size: 0.9em;
+    }
+
+    img {
+        width: 20%;
+    }
+
+    /*Modifs générales tablette*/
+
+
+    /*Navigation tablette*/
+    .topnav {
+        width: 90%;
+        border-radius: 1em 1em 0em 0em;
+        padding: 0.3em 0em 0.3em 0.8em;
+    }
+
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a {
+        float: left;
+        display: table;
+        font-size: 1.5em;
+        width: 13em;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: center;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: table;
+        text-align: left;
+    }
+
+    .topnav.responsive .dropdown {
+        float: none;
+        font-size: 1.5em;
+    }
+
+    .topnav.responsive .dropdown-content {
+        position: relative;
+        font-size: 0.6em;
+    }
+
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .topnav .dropdown {
+        display: none;
+    }
+
+    .topnav.responsive .dropdown {
+        display: contents;
+    }
+
+    /*Navigation tablette*/
+
+    /*Boîtes tablette*/
+    .guide {
+        width: 5em;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .flip-card {
+        height: 200px;
+    }
+
+    .container_iframe {
+        height: 300px;
+    }
+
+    .container_index_mini img {
+        width: 40%;
+        margin: 0 30% 0 30%;
+    }
+
+    /*Boîtes tablette*/
+
+    /*Pieds de page tablette*/
+    .container_footer {
+        width: 90%;
+        margin: auto;
+    }
+
+    footer {
+        font-size: 0.9em;
+        height: 1.8em;
+        padding-top: 0.2em;
+        border-radius: 0em 0em 1em 1em;
+    }
+
+    /*Pieds de page tablette*/
+}
+
+@media screen and (max-width: 425px) {
+
+    /*Modifs générales tel*/
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 0.9em;
+    }
+
+    p,
+    label {
+        font-size: 0.8em;
+    }
+
+    .guide {
+        width: 4em;
+    }
+
+    /*Modifs générales tel*/
+
+
+    /*Navigation tel*/
+    .topnav {
+        width: 90%;
+        border-radius: 1em 1em 0em 0em;
+        padding: 0.3em 0em 0.3em 0.8em
+    }
+
+    .topnav a {
+        display: none;
+        font-size: 1.1em;
+    }
+
+    #quiznav {
+        display: contents;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+        width: 3em;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav.responsive .dropdown {
+        float: none;
+    }
+
+    .topnav.responsive .dropdown-content {
+        position: relative;
+        font-size: 0.8em;
+    }
+
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .topnav .dropdown {
+        display: none;
+    }
+
+    .topnav.responsive .dropdown {
+        display: contents;
+        font-size: 1.2em;
+    }
+
+    /*Navigation tel*/
+
+    .front-page .terra-hero .home-hero .shape-heading {
+        top: -25px !important
+    }
+
+    /*Boîtes tel*/
+    .container {
+        width: 90%;
+    }
+
+    .container_2 img {
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 0.3em 0 0 0;
+    }
+
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .flip-card {
+        height: 220px;
+    }
+
+    .container_iframe {
+        height: 170px;
+    }
+
+    .container_index {
+        padding-top: 20%;
+    }
+
+    /*Boîtes tel*/
+
+    /*Quizz*/
+
+    .game-quiz-container {
+        width: 90%;
+        height: 90vh;
+    }
+
+    .game-details-container h1 {
+        font-size: 1rem;
+    }
+
+    .game-question-container {
+        height: 8rem;
+    }
+
+    .game-question-container h1 {
+        font-size: 0.9rem;
+    }
+
+    .game-options-container span {
+        width: 90%;
+        margin: 0.2em 0 0.2em 0;
+    }
+
+    .modal-content-container {
+        width: 90%;
+        height: 20rem;
+    }
+
+    .modal-content-container h1 {
+        font-size: 1.2rem;
+    }
+}
+
+/*Quizz*/
+
+/*Responsive*/
